@@ -1,0 +1,75 @@
+<script type="text/javascript">
+
+var calculator = function (){
+	// var input_2 = 0;
+	// var operator = "init for scope reasons";  remember to change line 9
+	// var input_1 = "prompt("Enter a number");"
+
+	// do {
+	// 	var operator = prompt("Enter a operator word 1) add 2) subtract 3) multiply 4) divide 5) equals" );
+	// 	input_2 = prompt("Enter a number");
+
+	// 	if (operator == "add") {
+	// 		input_1 += input_2;
+	// 	} else if (operator == "minus") {
+	// 		ans = input_1 -= input_2;
+	// 	} else if (operator == "multiply") {
+	// 		input_1 *= input_2;
+	// 	} else if (operator == "divide") {
+	// 		input_1 /= input_2;
+	// 	}
+	// } while (operator != "equals");
+
+	// alert("Your answer is \" " + input_1 + "\"");
+
+
+
+
+
+
+// 	var input_1 = 0;
+
+// 	do {
+// 		var input_2 = prompt("Enter a number");
+// 		input_2 = parseInt(input_2);
+// 		var operator = prompt("Enter a operator word 1) add 2) subtract 3) multiply 4) divide 5) equals" );
+
+// 		if (operator == "add" || operator == "equals") {
+// 			input_1 += input_2;
+// 		} else if (operator == "minus") {
+// 			ans = input_1 -= input_2;
+// 		} else if (operator == "multiply") {
+// 			input_1 *= input_2;
+// 		} else if (operator == "divide") {
+// 			input_1 /= input_2;
+// 		}
+// 	} while (operator != "equals");
+	 
+// 		alert("Your answer is \" " + input_1 + "\"");
+
+// }
+ 
+// calculator();
+ 
+</script>
+
+<!DOCTYPE html>
+<html>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+<button type="button">Click Me!</button>
+
+
+</html>
