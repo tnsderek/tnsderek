@@ -1,75 +1,229 @@
+<script type="text/javascript" src="http://www.ajaxblender.com/jslibs/jquery-1.3.2.js"></script>
+<!-- <link href="/article-sources/main.css" type="text/css" rel="stylesheet" /> -->
+
+
 <script type="text/javascript">
 
-var calculator = function (){
-	// var input_2 = 0;
-	// var operator = "init for scope reasons";  remember to change line 9
-	// var input_1 = "prompt("Enter a number");"
+	var clear_value = 0;
+	var temp_value = 0;
+	var arr  = [];
+	var arr1 = 0; 
+	var operator = "add";
 
-	// do {
-	// 	var operator = prompt("Enter a operator word 1) add 2) subtract 3) multiply 4) divide 5) equals" );
-	// 	input_2 = prompt("Enter a number");
+	function calculator (){   //executes this line when a operator div is pressed
 
-	// 	if (operator == "add") {
-	// 		input_1 += input_2;
-	// 	} else if (operator == "minus") {
-	// 		ans = input_1 -= input_2;
-	// 	} else if (operator == "multiply") {
-	// 		input_1 *= input_2;
-	// 	} else if (operator == "divide") {
-	// 		input_1 /= input_2;
-	// 	}
-	// } while (operator != "equals");
+		if (operator == "add") {
+			temp_value += arr1;
+		}  else if (operator == "minus") {
+			temp_value -= arr1;
+		}  else if (operator == "times") {
+			temp_value *= arr1;
+		}  else if (operator == "divide") {
+			temp_value /= arr1;
+		}  else if (operator == "equals") {
+			arr1 = temp_value 
+ 		} else if  (operator == "AC") {
+			arr1 = 0;
+			operator = "add";
+			temp_value = 0;
+		} else {
+			alert("DEREK MESSED UP!");
+		} 
 
-	// alert("Your answer is \" " + input_1 + "\"");
+		arr = [];
+	}
+
+	function text () {
+		
+		var numbers = arr1;
+		document.getElementById("display").innerText = numbers;
+	}
 
 
+//      $(document).ready(function(){
+//           $('.calculator').mouseout(function(){
+//                $('#mycursor').hide();
+//                return >false;
+//           });
+//           $('.calculator').mouseenter(function(){
+//                $('#mycursor').show();
+//                return >false;
+//           });
+//           $('.calculator').mousemove(function(e){
+//                $('#mycursor').css('left', e.clientX - 20).css('top', e.clientY + 7);
+//           });
+// });
 
 
-
-
-// 	var input_1 = 0;
-
-// 	do {
-// 		var input_2 = prompt("Enter a number");
-// 		input_2 = parseInt(input_2);
-// 		var operator = prompt("Enter a operator word 1) add 2) subtract 3) multiply 4) divide 5) equals" );
-
-// 		if (operator == "add" || operator == "equals") {
-// 			input_1 += input_2;
-// 		} else if (operator == "minus") {
-// 			ans = input_1 -= input_2;
-// 		} else if (operator == "multiply") {
-// 			input_1 *= input_2;
-// 		} else if (operator == "divide") {
-// 			input_1 /= input_2;
-// 		}
-// 	} while (operator != "equals");
-	 
-// 		alert("Your answer is \" " + input_1 + "\"");
-
-// }
- 
-// calculator();
  
 </script>
 
-<!DOCTYPE html>
+<!DOCclass html>
 <html>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
-<button type="button">Click Me!</button>
+	<head>
+		<style>
+			.body {
+			}
+
+			.header {
+				text-align: center;
+			}
+
+			.calculator {
+				width: 325px;
+				height: auto;
+				background-color: #9dd2ea;
+				/*background:linear-gradient(#9dd2ea, #8bceec);*/
+				margin: 100px auto;
+				position: relative;
+				border-radius: 3px;
+				box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+				padding: 20px 20px 9px;
+				background: linear-gradient(#9dd2ea, #8bceec);
+			}
+
+			#display {
+				height: 40px;
+				width: 212px;
+				float: right;
+				background: rgba(0, 0, 0, 0.2);
+				box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+				padding: 0 10px;
+				border-radius: 3px;
+
+				font-size: 17px;
+				text-align: right;
+				line-height: 40px;
+				letter-spacing: 1px;
+				color: white;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 
 
+			}
+
+			.keysize {
+				width: 66px;
+				height: 36px;
+				border-radius: 3px;
+				text-align: center;	
+				line-height: 36px;
+				display: inline-block;
+				user-select: none;
+				-o-user-select:none;
+				-moz-user-select: none;
+				-khtml-user-select: none;
+				-webkit-user-select: none;
+   				margin: 0 7px 11px 0;
+				border-radius: 3px;
+				/*cursor: url(davemanhand.png) 40 0, pointer;*/
+				cursor: pointer;
+				font: bold 14px Arial, sans-serif;   /* this is messing the center thingy up */
+
+
+			}
+
+			.equalkey {							
+				background: #f1ff92;
+				box-shadow: 0px 4px #9da853;
+				color: 888e5f;
+			}
+
+			.equalkey:hover {
+				background: #abb850;
+				box-shadow: 0px 4px #717a33;
+			}
+
+
+			.numkeys {
+				color: #888e5f;
+				background-color: white;
+				box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+
+			}
+
+			.numkeys:hover  {
+				background: #9c89f6;
+				color: white;
+				box-shadow: 0px 4px #717a33
+			}
+
+			.numkeys:active {
+				box-shadow: 0px 0px #6b54d3;
+				top: 4px;
+			}
+
+			.clearkey {
+				background-color: #ff9fa8;
+				box-shadow: 0px 4px #ff7c87;
+			}
+
+			.operatorkey {
+				box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+				background: #fff0f5;
+				margin-right: 0;
+				color: #888e5f;
+			}
+
+			.operatorkey:hover {
+				background: #9c89f6;
+				color: white;
+				box-shadow: 0px 4px #717a33
+			}
+
+			.operatorkey:active {
+				box-shadow: 0px 0px #6b54d3;
+				top: 4px;
+			}
+
+/*			 #mycursor {
+		        cursor: none;
+		        width: 97px;
+		        height: 137px;
+		        background: url("davemanhand.png") no-repeat left top;
+		        position: absolute;
+		        display: none;
+		        top: 0;
+		        left: 0;
+		        z-index: 10000;
+    		}*/
+
+
+		</style>
+		<body>
+			<h1 class="header"> Derek's Calculator </h1>
+			<div class="calculator">
+				<div id= "display"></div>
+				<!-- using minized HTML to get rid of spaces as taught here https://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
+				
+				   <div class = "keysize clearkey" name = "clear" value = "AC" onclick ='operator = "AC"; calculator(); text()'>AC</div><!--
+				--><div class = "keysize numkeys" name = "seven" value = "7" onclick = 'arr.push(7); arr1=parseFloat(arr.join("")); text()'>7</div><!--
+				--><div class = "keysize numkeys" name = "eight" value = "8" onclick = 'arr.push(8); arr1=parseFloat(arr.join("")); text()'>8</div><!--
+				--><div class = "keysize numkeys" name = "nine" value = "9" onclick = 'arr.push(9); arr1=parseFloat(arr.join("")); text()'>9</div><!--
+				--><div class = "keysize operatorkey" name = "plus" value = "&divide;"  onclick = 'calculator(); operator = "divide"'>&divide;</div><!--
+				--><div class = "keysize numkeys" name = "four" value = "4" onclick = 'arr.push(4); arr1=parseFloat(arr.join("")); text()'>4</div><!--
+				--><div class = "keysize numkeys" name = "five" value = "5" onclick = 'arr.push(5); arr1=parseFloat(arr.join("")); text()'>5</div><!--
+				--><div class = "keysize numkeys" name = "six" value = "6" onclick = 'arr.push(6); arr1=parseFloat(arr.join("")); text()'>6</div><!--
+				--><div class = "keysize operatorkey" name = "times" value = "&times;"  onclick = 'calculator(); operator = "times"'>&times;</div><!--
+				--><div class = "keysize numkeys" name = "one" value = "1" onclick = 'arr.push(1); arr1=parseFloat(arr.join("")); text()'>1</div><!--
+				--><div class = "keysize numkeys" name = "two" value = "2" onclick = 'arr.push(2); arr1=parseFloat(arr.join("")); text()'>2</div><!--
+				--><div class = "keysize numkeys" name = "three" value = "3" onclick = 'arr.push(3); arr1=parseFloat(arr.join("")); text()'>3</div><!--			
+				--><div class = "keysize operatorkey" name = "minus" value = "-" onclick = 'calculator(); operator = "minus"'>-</div><!--
+				--><div class = "keysize numkeys" name = "zero" value = "0" onclick = 'arr.push(0); arr1=parseFloat(arr.join("")); text()'>0</div><!--
+				--><div class = "keysize numkeys" name = "period" value = "&middot;" onclick = 'arr.push("."); arr1=parseFloat(arr.join(""))'>&middot;</div><!--
+				--><div class = "keysize equalkey" name = "equals" value =  "=" onclick ='calculator(); operator = "equals"; calculator(); text()'>=</div><!--
+				--><div class = "keysize operatorkey" name = "add" value = "+" onclick = 'calculator(); operator = "add"'>+</div>
+
+
+
+				<!-- <div class="div" name = "equals" value =  "=" onclick ='calculator(); alert(temp_value ) '>  -->
+
+    			<div id="mycursor"></div>
+			 
+
+			</div>
+		</body>
+	</head>
 </html>
+
+
+<!-- http://thecodeplayer.com/walkthrough/javascript-css3-calculator
